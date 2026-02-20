@@ -2,15 +2,7 @@ package cmd
 
 import (
 	"log"
-	"math/rand"
 	"os/exec"
-)
-
-var msgs = []string{"poopy butthead", "daddy dookie", "she moves with a purpose", "what a magnificent purpose", "is this hell be fr rn"}
-
-const (
-	MAX = 4
-	MIN = 0
 )
 
 func CumitInit() {
@@ -45,17 +37,5 @@ func DeletePix(path string) string {
 	}
 
 	return "yay"
-
-}
-
-func ShowThreeMsgs() []string {
-	// should be able to select one of the three messages
-	ans := make([]string, 0)
-	for range 3 {
-		x := rand.Intn(MAX-MIN) + MIN // from min-max
-		ans = append(ans, msgs[x])
-
-	}
-	return ans
 
 }
