@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/AlecAivazis/survey/v2"
 	"github.com/spf13/cobra"
 )
 
@@ -15,30 +16,34 @@ var rootcmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		// var input string
 		if showMsgs {
-			fmt.Println("pick one")
-			ans := ShowThreeMsgs()
-			for i, msg := range ans {
-				fmt.Printf("%s pick %d\n", msg, i)
 
-			}
-			// for i := range 3 {
-			// 	fmt.Printf("%s pick %d\n", ans[i+1], i+1)
+			ans := ShowThreeMsgs()
+			// for i, msg := range ans {
+			// 	fmt.Printf("%s pick %d\n", msg, i)
+
 			// }
-			fmt.Printf("pick the number\n")
-			var in int
-			fmt.Scan(&in)
-			str := ans[in]
-			fmt.Printf("chosen %s\n", str)
+			// // for i := range 3 {
+			// // 	fmt.Printf("%s pick %d\n", ans[i+1], i+1)
+			// // }
+			// fmt.Printf("pick the number\n")
+			// var in int
+			// fmt.Scan(&in)
+			// str := ans[in]
+
+			var str string
+			prompt := &survey.Select{
+				Message: "Pick one",
+				Options: ans,
+			}
+			survey.AskOne(prompt, &str)
+
+			fmt.Printf("chosen: %s\n", str)
 
 			return
 		}
 
 	},
 }
-
-// Source - https://stackoverflow.com/a/41761404
-// Posted by Shahriar, modified by community. See post 'Timeline' for change history
-// Retrieved 2026-02-20, License - CC BY-SA 3.0
 
 func Execute() {
 	if err := rootcmd.Execute(); err != nil {
