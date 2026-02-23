@@ -8,6 +8,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+// hjnftcucb
+
 var initcmd = &cobra.Command{
 	Use:   "init",
 	Short: "Initialise",
