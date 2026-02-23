@@ -7,4 +7,12 @@ only gets triggered when git commit
 use cumit init to initialise
 cumit -h for help
 
+go install github.com/crizah/cumit@v0.1.2
 
+add this to ~/.bashrc
+```
+export PATH=$PATH:$(go env GOPATH)/bin
+```
+
+ready to use!
+(will make this automated and much smoother EVENTUALLY)
