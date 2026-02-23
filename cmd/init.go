@@ -11,7 +11,7 @@ import (
 var initcmd = &cobra.Command{
 	Use:   "init",
 	Short: "Initialise",
-	Long:  "install hook into .git/hooks/prepare-commit-msg",
+	Long:  "install hook into .git/hooks/commit-msg",
 	Run: func(cmd *cobra.Command, args []string) {
 		// check if .git
 
@@ -21,7 +21,7 @@ var initcmd = &cobra.Command{
 			os.Exit(1)
 		}
 
-		path := ".git/hooks/prepare-commit-msg"
+		path := ".git/hooks/commit-msg"
 		ex, err := getPath()
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "cabt get executable path %s\n", err)
@@ -30,7 +30,8 @@ var initcmd = &cobra.Command{
 
 		content := fmt.Sprintf(`#!/bin/sh
 # cumit hook
- "%s" hook "$1" "$2"
+exec < /dev/tty
+"%s" hook "$1" "$2"
 `, ex)
 
 		err = os.WriteFile(path, []byte(content), 0755)
