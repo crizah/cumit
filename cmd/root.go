@@ -19,6 +19,7 @@ var rootcmd = &cobra.Command{
 		if showMsgs {
 
 			ans := ShowThreeMsgs()
+			ans = append(ans, "refresh")
 
 			var str string
 			prompt := &survey.Select{
@@ -26,7 +27,14 @@ var rootcmd = &cobra.Command{
 				Options: ans,
 			}
 			survey.AskOne(prompt, &str)
-
+			if str == "refresh" {
+				ans = ShowThreeMsgs()
+				prompt := &survey.Select{
+					Message: "Pick one",
+					Options: ans,
+				}
+				survey.AskOne(prompt, &str)
+			}
 			fmt.Printf("chosen: %s\n", str)
 
 			return
