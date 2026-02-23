@@ -8,6 +8,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
+//ksuehrkhtmct5iutg
 // hjnftcucb
 
 var initcmd = &cobra.Command{
