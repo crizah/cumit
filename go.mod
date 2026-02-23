@@ -1,4 +1,4 @@
-module cumit
+module github.com/crizah/cumit
 
 go 1.25.5
 
