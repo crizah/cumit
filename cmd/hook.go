@@ -22,12 +22,17 @@ var hookcmd = &cobra.Command{
 		}
 
 		msgs := ShowThreeMsgs()
+		tty, err := os.OpenFile("/dev/tty", os.O_RDWR, 0)
+		if err != nil {
+			return
+		}
+		defer tty.Close()
 		var str string
 		prompt := &survey.Select{
 			Message: "Pick one",
 			Options: msgs,
 		}
-		err := survey.AskOne(prompt, &str)
+		err = survey.AskOne(prompt, &str)
 		if err != nil {
 			return
 

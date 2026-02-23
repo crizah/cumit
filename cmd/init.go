@@ -17,7 +17,7 @@ var initcmd = &cobra.Command{
 
 		check := checkGitRepo()
 		if !check {
-			fmt.Printf("Not a git repo dumdum\n")
+			fmt.Printf("not a git repo dumdum\n")
 			os.Exit(1)
 		}
 
@@ -30,7 +30,7 @@ var initcmd = &cobra.Command{
 
 		content := fmt.Sprintf(`#!/bin/sh
 # cumit hook
-GIT_EDITOR=true "%s" hook "$1" "$2"
+ "%s" hook "$1" "$2"
 `, ex)
 
 		err = os.WriteFile(path, []byte(content), 0755)
@@ -41,7 +41,7 @@ GIT_EDITOR=true "%s" hook "$1" "$2"
 
 		c := exec.Command("git", "config", "core.editor", "true")
 		if err := c.Run(); err != nil {
-			fmt.Fprintf(os.Stderr, "failed to set editor: %s\n", err)
+			fmt.Fprintf(os.Stderr, "editor not disabled %s\n", err)
 		}
 
 		fmt.Println("hell yeah")
