@@ -8,7 +8,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// git commit -> prepare-commit-msg hook -> cumit runs -> user picks message -> git uses it
+// git commit -> commit-msg hook -> cumit runs -> user picks message -> git uses it
 var rootcmd = &cobra.Command{
 	Use:   "cumit",
 	Short: "Cumit is a cli tool to generate silly git commit msgs",
@@ -19,7 +19,6 @@ var rootcmd = &cobra.Command{
 		if showMsgs {
 
 			ans := ShowThreeMsgs()
-			ans = append(ans, "refresh")
 
 			var str string
 			prompt := &survey.Select{
@@ -27,14 +26,7 @@ var rootcmd = &cobra.Command{
 				Options: ans,
 			}
 			survey.AskOne(prompt, &str)
-			if str == "refresh" {
-				ans = ShowThreeMsgs()
-				prompt := &survey.Select{
-					Message: "Pick one",
-					Options: ans,
-				}
-				survey.AskOne(prompt, &str)
-			}
+
 			fmt.Printf("chosen: %s\n", str)
 
 			return

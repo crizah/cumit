@@ -8,12 +8,9 @@ import (
 	"github.com/spf13/cobra"
 )
 
-//ksuehrkhtmct5iutg
-// hjnftcucb
-
 var initcmd = &cobra.Command{
 	Use:   "init",
-	Short: "Initialise",
+	Short: "Initialise into a .git repo",
 	Long:  "install hook into .git/hooks/commit-msg",
 	Run: func(cmd *cobra.Command, args []string) {
 		// check if .git

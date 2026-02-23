@@ -1,6 +1,42 @@
 package msg
 
+// put this is a db
+// store ~30 in memory with redis
+// set up a cronjob, to change the 30 sized slice every couplke of days
+
 var MSGS = []string{"poopy butthead", "daddy dookie", "she moves with a purpose",
-	"what a magnificent purpose", "is this hell be fr rn", "ill take all ur thanks and all ur sympathies",
-	"cry for me", "plenty of time here to nurture concequence", "its a bit of a joke", "time==crunched",
-	"feeling diskinserted?"}
+	"what a magnificent purpose", "ill take all ur thanks and all ur sympathies",
+	"cry for me", "plenty of time here to nurture concequence",
+	"feeling diskinserted?", "bag of rubber bands", "everything is lying", "god is real", "a movement is acomplished in 6 stages",
+	"the 7th brings return", "that cat something i cant forget", "change returns success", "action brings good fortune xD",
+	"the black and green scarecrow is sadder than me", "cos() life's not unkind he doesn't mind", "ive got a cloak its a bit of a joke",
+	"if u think it could look good, then i guess it should", "ill give u anything everything if u want things",
+	"gerald the mouse", "who's gonna show this stranger around", "goodbye cruel world", "i need a dirty woman, i need a dirty girl",
+	"so ya thot ya might like to go to the show?", "is this not what u expected to see?", "together we stand, divided we fall",
+	"i wanna go home, take off this uniform and leave the show", "have i been guilty all this time?", "goodmoring worm your honour",
+	"crazy, toys in the attic hes crazy", "they must have taken my marbles away", "THERE MUST HAVE BEEN A DOOR THERE IN THE WALL WHEN I CAME IN",
+	"tear down the wall!!!", "banging your heart against some mad buggers wall", "u better run all day and run all night",
+	"show me the world as id love to see it", "i feel my luck could change", "kill me sarah", "trust i can rely on your vote",
+	"i need all the common sense", "but oh my god, make me in your image", "i get tunnel vision", "life's a chore",
+	"soon your organs will grow little mouths", "when the smoke clears, its all ill have left", "i bet your pussy is holy too",
+	"im getting killed by a pretty good life", "you should be shame's only daughter", "im creeping back to life",
+	"look at him now, hes paler somehow", "you're so hard to please", "why did we tell you that you were always the golden boy",
+	"self disgust is self obsession honey", "i hate purity, i hate goodness", "i am an architect, they call me a butcher",
+	"you'll burn in hell for your sins", "i got secrets in my garden shed", "spread it wide my wife my life",
+	"without a defence i stand", "the devil's familiar comes every night", "am i guilty again?", "it promised me a good life if i followed all its wishes",
+	"whats beautiful is good", "i once thot that time was an ocean", "i would go out, but theres a world war",
+	"we must let the clamp do what the clamp does best", "i only go out when theres a world war", "ignore the hole ive dug again",
+	"thats a funny looking shrine", "oh god of weather, henry knows", "we're stronger and we tell all our school friends",
+	"the good hunters guid to a bad night", "darling ill spoil it myself", "squished face, slicked pig living in a smokey city",
+	"it comes and goes in plateaus", "we are not a proud race", "we're just trying, im only trying", "drunk drivers",
+	"things are not what they seem", "shesmovedon", "theres no comfert in responsibility", "drown with me",
+	"come along with me", "these atoms are liars", "does anyone else feel guilty?", "and our teeth are all too often gnashed",
+	"i wanna be just like a melody", "this cold world is not for you", "mom, am i still young?", "mom, would you wash my back?",
+	"the lunatic is on the grass", "welcome to the machine", "no one told you when to run", "you missed the starting gun",
+	"i hold my breath i hold it", "im not getting what i want out of people", "if i were a train, id be late",
+	"its only sex", "struck me like a chord, im an ugly boy", "who bought you that ring?", "chher up child, your worlds not tearing apart",
+	"confusion will be my epitath", "but i fear tomorrow i will be crying", "the wise men share a joke", "the yellow jester does not play",
+	"bhaag dk bose", "im gonna chainsaw through", "oh by the way, which one's pink?", "leather pants, happiness",
+	"today i met who im gonna be", "everything is lying", "im hinding from you", "i hate the words you use", "of which is know nothing",
+	"when stiff useless, when needed limp", "houdini",
+}
