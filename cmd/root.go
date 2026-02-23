@@ -8,6 +8,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
+// git commit -> prepare-commit-msg hook -> cumit runs -> user picks message -> git uses it
 var rootcmd = &cobra.Command{
 	Use:   "cumit",
 	Short: "Cumit is a cli tool to generate silly git commit msgs",
@@ -32,6 +33,12 @@ var rootcmd = &cobra.Command{
 		}
 
 	},
+}
+
+func init() {
+	rootcmd.AddCommand(initcmd)
+	rootcmd.AddCommand(hookcmd)
+	rootcmd.Flags().BoolVarP(&showMsgs, "show", "s", false, "shows 3 random messages")
 }
 
 func Execute() {

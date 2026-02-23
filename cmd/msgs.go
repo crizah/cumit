@@ -1,11 +1,11 @@
 package cmd
 
-import "math/rand"
+import (
+	"cumit/msg"
+	"math/rand"
+)
 
 var showMsgs bool
-var msgs = []string{"poopy butthead", "daddy dookie", "she moves with a purpose",
-	"what a magnificent purpose", "is this hell be fr rn", "ill take all ur thanks and all ur sympathies",
-	"cry for me", "plenty of time here to nurture concequence", "its a bit of a joke"}
 
 const (
 	MAX = 8
@@ -34,13 +34,9 @@ func ShowThreeMsgs() []string {
 
 		}
 
-		ans = append(ans, msgs[x])
+		ans = append(ans, msg.MSGS[x])
 
 	}
 	return ans
 
-}
-
-func init() {
-	rootcmd.Flags().BoolVarP(&showMsgs, "show", "s", false, "shows 3 random messages")
 }
