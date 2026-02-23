@@ -1,1 +1,1 @@
-ill give u anythign everything if u want things
+a cli tool for when u are me and dont want to write an approriate commit message and also dont want to think of one cuz thats a lot of work and ur lazy
