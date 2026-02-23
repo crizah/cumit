@@ -9,7 +9,7 @@ import (
 )
 
 var hookcmd = &cobra.Command{
-	Use:   "hook <commit msg file> <commit source>",
+	Use:   "hook [commit-msg-file] [commit-source]",
 	Short: "make the hook",
 	Args:  cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
