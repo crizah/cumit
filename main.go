@@ -1,7 +1,7 @@
 package main
 
 import (
-	"cumit/cmd"
+	"github.com/crizah/cumit/cmd"
 )
 
 func main() {

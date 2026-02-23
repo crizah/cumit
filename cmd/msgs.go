@@ -1,8 +1,9 @@
 package cmd
 
 import (
-	"cumit/msg"
 	"math/rand"
+
+	"github.com/crizah/cumit/msg"
 )
 
 var showMsgs bool

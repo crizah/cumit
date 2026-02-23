@@ -8,7 +8,6 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// git commit -> commit-msg hook -> cumit runs -> user picks message -> git uses it
 var rootcmd = &cobra.Command{
 	Use:   "cumit",
 	Short: "Cumit is a cli tool to generate silly git commit msgs",
