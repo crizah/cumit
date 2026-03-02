@@ -38,5 +38,5 @@ var MSGS = []string{"poopy butthead", "daddy dookie", "she moves with a purpose"
 	"confusion will be my epitath", "but i fear tomorrow i will be crying", "the wise men share a joke", "the yellow jester does not play",
 	"bhaag dk bose", "im gonna chainsaw through", "oh by the way, which one's pink?", "leather pants, happiness",
 	"today i met who im gonna be", "everything is lying", "im hinding from you", "i hate the words you use", "of which is know nothing",
-	"when stiff useless, when needed limp", "houdini",
+	"when stiff useless, when needed limp", "houdini", "vampire in the corner", "yet another movie",
 }
